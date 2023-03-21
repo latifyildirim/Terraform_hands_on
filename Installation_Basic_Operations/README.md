@@ -370,7 +370,7 @@ resource "aws_instance" "tf-ec2" {
 }
 
 resource "aws_s3_bucket" "tf-s3" {
-  bucket = "oliver-tf-test-bucket-addwhateveryouwant"
+  bucket = "latif-tf-test-bucket-addwhateveryouwant"
 }
 ```
 
