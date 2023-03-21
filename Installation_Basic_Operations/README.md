@@ -363,7 +363,7 @@ provider "aws" {
 resource "aws_instance" "tf-ec2" {
   ami           = "ami-0ed9277fb7eb570c9"
   instance_type = "t2.micro"
-  key_name      = "mk"    # write your pem file without .pem extension>
+  key_name      = "latif"    # write your pem file without .pem extension>
   tags = {
     "Name" = "tf-ec2"
   }
