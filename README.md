@@ -9,8 +9,8 @@ Terraform Hands On Studies  [![Awesome](https://cdn.rawgit.com/sindresorhus/awes
 
 ## Index 📜
 
-### 🔖 [Installation_Basic_Operations](https://github.com/latifyildirim/Terraform_hands_on/tree/main/Installation_Basic_Operations)
+### 🔖 [Installation Basic Operations](https://github.com/latifyildirim/Terraform_hands_on/tree/main/Installation_Basic_Operations)
 Zweck dieser praktischen Schulung ist es, den Schülern das Wissen über grundlegende Operationen in Terraform zu vermitteln.
 
-### 🔖 [Terraform_Commands_Varables_Conditonals_Loops]()
+### 🔖 [Terraform Commands Variables Conditionals Loops](https://github.com/latifyildirim/Terraform_hands_on/tree/main/Terraform_Commands_Varables_Conditonals_Loops)
 Ziel dieser praktischen Schulung ist es, den Schülern das Wissen über terraforme Befehle, Variablen, Bedingungen und Schleifen in Terraform zu vermitteln.
