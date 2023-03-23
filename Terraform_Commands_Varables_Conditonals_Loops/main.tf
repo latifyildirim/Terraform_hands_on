@@ -23,17 +23,17 @@ resource "aws_instance" "tf-ec2" {
   tags = {
     Name = "${local.mytag}-come from locals"
   }
-} 
+}
 
 resource "aws_s3_bucket" "tf-s3" {
-#   bucket = "${var.s3_bucket_name}-${count.index}"
-#   count  = var.num_of_buckets
-#   count = var.num_of_buckets != 0 ? var.num_of_buckets : 3
+  #   bucket = "${var.s3_bucket_name}-${count.index}"
+  #   count  = var.num_of_buckets
+  #   count = var.num_of_buckets != 0 ? var.num_of_buckets : 3
   for_each = toset(var.users)
   bucket   = "example-tf-s3-bucket-${each.value}"
 }
 
 resource "aws_iam_user" "new-users" {
   for_each = toset(var.users)
-  name = each.value
+  name     = each.value
 }
