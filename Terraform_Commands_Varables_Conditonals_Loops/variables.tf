@@ -20,10 +20,11 @@ variable "s3_bucket_name" {
 }
 
 variable "num_of_buckets" {
-  default = 2
+  default = 0
 
 }
 
 variable "users" {
-  default = ["santiano", "maichael", "faredo"]
+  default = ["aliata", "veli", "kemalettin"]
 }
+
