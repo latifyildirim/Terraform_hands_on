@@ -11,5 +11,5 @@ output "tf_example_private_ip" {
 # }
 
 output "uppercase_users" {
-  value = [for user in var.users : upper(user) if length(user) > 6]
+  value = [for user in var.users : upper(user) if length(user) > 5]
 }
