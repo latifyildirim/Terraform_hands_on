@@ -26,9 +26,9 @@ resource "aws_instance" "tf-ec2" {
 } 
 
 resource "aws_s3_bucket" "tf-s3" {
-  # bucket = "${var.s3_bucket_name}-${count.index}"
-  # # count  = var.num_of_buckets
-  # count = var.num_of_buckets != 0 ? var.num_of_buckets : 3
+#   bucket = "${var.s3_bucket_name}-${count.index}"
+#   count  = var.num_of_buckets
+#   count = var.num_of_buckets != 0 ? var.num_of_buckets : 3
   for_each = toset(var.users)
   bucket   = "example-tf-s3-bucket-${each.value}"
 }
