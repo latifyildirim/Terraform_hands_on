@@ -50,6 +50,25 @@ data "aws_ami" "tf-ami" {
   }
 
 }
+# data "aws_ami" "latif" { 
+#   most_recent      = true 
+#   owners           = ["self"]
+
+#   filter {
+#     name   = "name"
+#     values = ["terraform*"]
+#   }
+
+#   filter {
+#     name   = "architecture"
+#     values = ["x86_64"]
+#   }
+
+#   filter {
+#     name   = "virtualization-type"
+#     values = ["hvm"]
+#   }
+# }
 
 resource "aws_instance" "tf-ec2" {
   ami           = data.aws_ami.tf-ami.id
