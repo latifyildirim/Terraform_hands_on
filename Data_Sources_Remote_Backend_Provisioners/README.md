@@ -43,7 +43,7 @@ terraform {
 }
 
 locals {
-  mytag = "clarusway-local-name"
+  mytag = "latif-local-name"
 }
 
 data "aws_ami" "tf_ami" {
@@ -116,7 +116,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "tf-remote-state" {
-  bucket = "tf-remote-s3-bucket-clarusways-changehere"
+  bucket = "tf-remote-s3-bucket-latifs-changehere"
 
   force_destroy = true # Normally it must be false. Because if we delete s3 mistakenly, we lost all of the states.
 }
@@ -170,7 +170,7 @@ terraform {
     }
   }
   backend "s3" {
-    bucket = "tf-remote-s3-bucket-oliver-changehere"
+    bucket = "tf-remote-s3-bucket-latif-changehere"
     key = "env/dev/tf-remote-backend.tfstate"
     region = "us-east-1"
     dynamodb_table = "tf-s3-app-lock"
@@ -201,7 +201,7 @@ terraform apply
 
 ```go
 resource "aws_s3_bucket" "tf-test-1" {
-  bucket = "clarusway-test-1-versioning"
+  bucket = "latif-test-1-versioning"
 }
 ```
 
@@ -213,7 +213,7 @@ terraform apply
 
 ```go
 resource "aws_s3_bucket" "tf-test-2" {
-  bucket = "clarusway-test-2-locking-2"
+  bucket = "latif-test-2-locking-2"
 }
 ```
 
@@ -284,7 +284,7 @@ provider "aws" {
 resource "aws_instance" "instance" {
   ami = "ami-0c02fb55956c7d316"
   instance_type = "t2.micro"
-  key_name = "oliver"
+  key_name = "latif"
   security_groups = ["tf-provisioner-sg"]
   tags = {
     Name = "terraform-instance-with-provisioner"
@@ -299,7 +299,7 @@ resource "aws_instance" "instance" {
     host = self.public_ip
     type = "ssh"
     user = "ec2-user"
-    private_key = file("~/oliver.pem")
+    private_key = file("~/latif.pem")
   }
 
   provisioner "remote-exec" {
