@@ -22,14 +22,6 @@ locals {
   mytag = "latif-local-name"
 }
 
-variable "ec2-type" {
-  default = "t2.micro"
-}
-
-variable "key-name" {
-  default = "latif"
-}
-
 data "aws_ami" "tf-ami" {
   most_recent = true
   owners      = ["amazon"] # Canonical
@@ -85,9 +77,4 @@ resource "aws_s3_bucket" "tf-test-1" {
 
 resource "aws_s3_bucket" "tf-test-2" {
   bucket = "latif-test-2-locking-2"
-}
-
-output "ami-info" {
-  value = data.aws_ami.tf-ami.id
-
 }
