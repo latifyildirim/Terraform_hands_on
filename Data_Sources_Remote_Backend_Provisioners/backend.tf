@@ -11,42 +11,31 @@ provider "aws" {
   region = "us-east-1"
 }
 
+# 1- s3 bucket
 resource "aws_s3_bucket" "tf-remote-state" {
   bucket        = "tf-remote-s3-bucket-latifs-changehere"
   force_destroy = true
 
   tags = {
-    Name        = "My bucket"
-    Environment = "Dev"
+    Name = "My bucket"
   }
 }
-
-# 1-s3 bucket
-
-resource "aws_s3_bucket_versioning" "versioning_backend_s3" {
+# 2- verion
+resource "aws_s3_bucket_versioning" "versioning_s3_backend" {
   bucket = aws_s3_bucket.tf-remote-state.id
   versioning_configuration {
     status = "Enabled"
   }
 }
-# 2- version
-resource "aws_s3_bucket_server_side_encryption_configuration" "mybackend" {
-  bucket = aws_s3_bucket.tf-remote-state.id
-
-  rule {
-    apply_server_side_encryption_by_default {
-      sse_algorithm = "AES256"
-    }
-  }
-}
-# 3- encryption
-resource "aws_dynamodb_table" "tf-remote-state-lock" {
-  name         = "tf-s3-app-lock"
+# 3- encription  Zaten sifreli geliyor
+# 4- dynamodb
+resource "aws_dynamodb_table" "basic-dynamodb-table" {
+  name         = "tf-remote-state-lock"
   billing_mode = "PAY_PER_REQUEST"
   hash_key     = "LockID"
+
   attribute {
     name = "LockID"
     type = "S"
   }
 }
-# 4- dynamodb
