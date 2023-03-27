@@ -302,7 +302,7 @@ cd && mkdir cw-modules && cd cw-modules && touch main.tf
 - Copy `Provision Instructions` or `Usage` part. Next, paste it to the `main.tf` and add your `key file` name.
 
 ```go
-provider "aws" {
+provider "aws" {terraform-aws-docker-**instance**
   region = "us-east-1"
 }
 
