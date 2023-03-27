@@ -307,7 +307,7 @@ provider "aws" {
 }
 
 module "docker-instance" {
-  source  = "latif/docker-instance/aws"
+  source  = "latifyildirim/docker-instance/aws"
   key_name = "latif"
 }
 ```
