@@ -1,0 +1,5 @@
+https://developer.hashicorp.com/terraform/language/expressions/custom-conditions#input-variable-validation
+
+terraform plan -var "instancetype=t2.large"
+terraform plan -var "myami=026b57f3c383c2eec"
+terraform plan -var "department=CYBER"

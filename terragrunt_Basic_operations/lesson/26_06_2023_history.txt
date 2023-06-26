@@ -1,0 +1,67 @@
+    1  terraform version
+    2  terragrunt versiobn
+    3  terragrunt --versiobn
+    4  terraform --version
+    5  terragrunt --version
+    6  terragrunt version
+    7  terragrunt --version
+    8  terragrunt --help
+    9  aws configure
+   10  cd terraform-modules/
+   11  cd dev
+   12  terraform init
+   13  cd ..
+   14  mkdir terragrunt && cd terragrunt && mkdir dev prod qa stage && cd dev && touch terragrunt.hcl && cd ../prod && touch terragrunt.hcl && cd ../qa && touch terragrunt.hcl && cd ../stage && touch terragrunt.hcl
+   15  cd ..
+   16  cd dev/
+   17  ls
+   18  terragrunt init
+   19  terragrunt plan
+   20  terragrunt  apply
+   21  cd ..
+   22  terragrunt run-all apply
+   23  terragrunt run-all destroy --terragrunt-non-interactive
+   24  cd ..
+   25  git config --global credential.helper 'store --file /home/ec2-user/lesson/.git-credentials'
+   26  terragrunt init
+   27  git config --global credential.helper 'store --file ~/lesson/.git-credentials'
+   28  terragrunt init
+   29  git config
+   30  git config --show-origin
+   31  git config get-all
+   32  git config --get-all
+   33  git config --global user.name latifyildirim
+   34  git config --global user.email lyildirim.3017@gmail.com
+   35  git config --global credential.helper 'store --file ~/lesson/.git-credentials'
+   36  terragrunt init
+   37  cd terragrunt/
+   38  cd dev/
+   39  cd .. 
+   40  cd github/
+   41  terragrunt  init
+   42  git config --global user.email lyildirim.3017@gmail.com123
+   43  git config --global user.name latifyildirim3123
+   44  git config --global credential.helper 'store --file ~/lesson/.git-credentials'
+   45  terragrunt  init
+   46  cd         ..
+   47  mkdir tf-log && cd tf-log && touch log.tf
+   48  export TF_LOG=TRACE
+   49  export TF_LOG_PATH=./debug.log
+   50  terraform init
+   51  terraform apply
+   52  terraform plan
+   53  terraform apply -auto-approve
+   54  terraform destroy -auto-approve
+   55  cd ..
+   56  mkdir validation && cd validation && touch validation.tf
+   57  terraform plan
+   58  ls
+   59  terraform plan
+   60  terraform init
+   61  terraform plan
+   62  terraform plan -var "instancetype=t2.large"
+   63  terraform plan -var "myami=026b57f3c383c2eec"
+   64  terraform plan -var "department=CYBER"
+   65  cd ..
+   66  hostory > 26_06_2023_history.txt
+   67  history > 26_06_2023_history.txt
